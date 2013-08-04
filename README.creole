@@ -5,7 +5,7 @@ manage this repo. Assuming you have a ruby runtime and git installed:
 
 {{{
 gem install homesick
-homesick clone git://github.com/fnichol/dotvim.git
+homesick clone git://github.com/ryanonrails/dotvim.git
 homesick pull dotvim && homesick symlink dotvim
 }}}
 
@@ -14,4 +14,6 @@ Then keep up to date:
 {{{
 homesick pull dotvim && homesick symlink dotvim
 }}}
+
+Initially forked from fnichol!
 
