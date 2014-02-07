@@ -20,6 +20,7 @@ endif
 let g:nerdtree_tabs_open_on_gui_startup=0
 let NERDTreeShowHidden=1
 let g:ctrlp_custom_ignore = '\v[\/](tmp|vendor/bundle|\.git)$'
+let g:ctrlp_working_path_mode = 'a'
 
 " Remap tabs
 macmenu &File.New\ Tab key=<D-t>
