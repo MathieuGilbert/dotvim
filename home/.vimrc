@@ -44,7 +44,9 @@ nnoremap / /\v
 vnoremap / /\v
 set ignorecase                    " case insensitive matching
 set smartcase                     " turns case-sensitive if expression contains
-                                  " a capital letter
+ " a capital letter
+
+set showmatch
 set gdefault                      " :substitute flag 'g' is default on
 set incsearch                     " highlight matching as you type
 
@@ -73,6 +75,8 @@ set nowritebackup                 " same again
 
 set directory=$HOME/.vim/tmp//,.  " keep swap files in one location"
 
+set autoindent                    " always set autoindenting on
+set copyindent                    " copy the previous indentation on autoindenting
 set tabstop=2                     " number of spaces that a <Tab> in the file
                                   " counts for
 set shiftwidth=2                  " number of spaces to use for each step of
@@ -85,6 +89,13 @@ set list                          " display unprintable characters
 " setting display chars for tab and eol
 set listchars=tab:>\ ,eol:~
 
+set history=1000         " remember more commands and search history
+set undolevels=1000      " use many muchos levels of undo
+
+set nobackup
+set noswapfile
+
+
 " ctrl+h: nav to left window
 nnoremap <C-h> <C-w>h
 " ctrl+j: nav to the window below
@@ -95,9 +106,6 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 " opens new vert split and switch over to it
 map <leader>w <C-w>v<C-w>l
-
-" map F2 to NERDTreeToggle (show/hide drawer)
-map <F2> :NERDTreeToggle<cr>
 
 " forgot to use sudo for editing?
 cmap w!! w !sudo tee % >/dev/null
@@ -163,4 +171,4 @@ runtime macros/matchit.vim
 " - [[http://vimcasts.org/episodes/running-vim-within-irb/]]
 " - [[http://rsontech.net/articles/2010/10/12/20/vim-plugin-management]]
 " - [[http://vim.wikia.com/wiki/Highlight_unwanted_spaces]]
-
+" - [[http://nvie.com/posts/how-i-boosted-my-vim/]]

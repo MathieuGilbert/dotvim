@@ -1,5 +1,4 @@
-                                  " set font and size
-set guifont=Inconsolata:h14,Monaco:h14
+set guifont=Inconsolata:h14,Monaco:h14 " set font and size"
 set antialias                     " smooth fonts (for MacVim)
 set encoding=utf-8                " use UTF-8 everywhere
 
@@ -21,6 +20,12 @@ let g:nerdtree_tabs_open_on_gui_startup=0
 let NERDTreeShowHidden=1
 let g:ctrlp_custom_ignore = '\v[\/](tmp|vendor/bundle|\.git)$'
 let g:ctrlp_working_path_mode = 'a'
+let g:ctrlp_show_hidden = 1
+" map F2 to NERDTreeToggle (show/hide drawer)
+map <F2> :NERDTreeToggle<cr>
+map <leader>r :NERDTreeFind<cr>
+map <leader>h :NERDTree ~/<cr>
+map <leader>p :NERDTree ~/
 
 " Remap tabs
 macmenu &File.New\ Tab key=<D-t>
